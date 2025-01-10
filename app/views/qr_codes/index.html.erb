@@ -1,0 +1,14 @@
+<h1>Gerador de QR Code</h1>
+
+<form method="get" action="/">
+  <label for="content">Digite o conteúdo:</label>
+  <input type="text" name="content" id="content" value="<%= @content %>">
+  <button type="submit">Gerar QR Code</button>
+</form>
+
+<% if @svg %>
+  <h2>Seu QR Code:</h2>
+  <div>
+    <%= raw @svg %>
+  </div>
+<% end %>
